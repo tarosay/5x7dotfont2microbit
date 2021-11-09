@@ -42,11 +42,13 @@ namespace _5x7dotFontSender
             // 
             // tbxMessage
             // 
+            this.tbxMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxMessage.Location = new System.Drawing.Point(6, 44);
             this.tbxMessage.Multiline = true;
             this.tbxMessage.Name = "tbxMessage";
             this.tbxMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbxMessage.Size = new System.Drawing.Size(707, 160);
+            this.tbxMessage.Size = new System.Drawing.Size(550, 160);
             this.tbxMessage.TabIndex = 3;
             this.tbxMessage.Text = "マイクロビットで文字を表示します。";
             // 
@@ -61,7 +63,8 @@ namespace _5x7dotFontSender
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(605, 209);
+            this.btnSend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSend.Location = new System.Drawing.Point(448, 209);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(108, 23);
             this.btnSend.TabIndex = 6;
@@ -71,6 +74,8 @@ namespace _5x7dotFontSender
             // 
             // gbxTextSend
             // 
+            this.gbxTextSend.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbxTextSend.Controls.Add(this.btnStop);
             this.gbxTextSend.Controls.Add(this.lblConnect);
             this.gbxTextSend.Controls.Add(this.btnSerialOpen);
@@ -80,14 +85,15 @@ namespace _5x7dotFontSender
             this.gbxTextSend.Controls.Add(this.tbxMessage);
             this.gbxTextSend.Location = new System.Drawing.Point(12, 3);
             this.gbxTextSend.Name = "gbxTextSend";
-            this.gbxTextSend.Size = new System.Drawing.Size(719, 240);
+            this.gbxTextSend.Size = new System.Drawing.Size(562, 240);
             this.gbxTextSend.TabIndex = 0;
             this.gbxTextSend.TabStop = false;
             // 
             // btnStop
             // 
+            this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStop.Enabled = false;
-            this.btnStop.Location = new System.Drawing.Point(524, 209);
+            this.btnStop.Location = new System.Drawing.Point(367, 209);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(75, 23);
             this.btnStop.TabIndex = 5;
@@ -106,7 +112,8 @@ namespace _5x7dotFontSender
             // 
             // btnSerialOpen
             // 
-            this.btnSerialOpen.Location = new System.Drawing.Point(532, 11);
+            this.btnSerialOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSerialOpen.Location = new System.Drawing.Point(375, 11);
             this.btnSerialOpen.Name = "btnSerialOpen";
             this.btnSerialOpen.Size = new System.Drawing.Size(181, 23);
             this.btnSerialOpen.TabIndex = 2;
@@ -128,7 +135,7 @@ namespace _5x7dotFontSender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(740, 249);
+            this.ClientSize = new System.Drawing.Size(583, 249);
             this.Controls.Add(this.gbxTextSend);
             this.Name = "MainForm";
             this.Text = "マイクロビットに5x7ドット文字を送信します";
