@@ -13,7 +13,7 @@ namespace _5x7dotFontSender
 {
     /// <summary>
     /// フォントは、
-    /// ユズノカ様作成の mikannnoki-font ユズノカ様作成の
+    /// ユズノカ様作成の mikannnoki-font
     /// ５×７ドット文字フォント「pixelfont-5x7.ttf」を用いています
     /// https://mikannnoki-font.booth.pm/
     /// https://booth.pm/ja/items/1477300
@@ -49,8 +49,7 @@ namespace _5x7dotFontSender
             SolidBrush bBlack = new SolidBrush(Color.Black);
             SolidBrush bWhite = new SolidBrush(Color.White);
 
-            ////半角を全角に変換する
-            //string setText = Strings.StrConv(text, VbStrConv.Wide, 0x411);
+            //string setText = Strings.StrConv(text, VbStrConv.Wide, 0x411);    //半角を全角に変換する
             string setText = text;
             int scanWidth = 0;
             for (int i = 0; i < setText.Length; i++)
@@ -66,16 +65,17 @@ namespace _5x7dotFontSender
                 //string dtstr = dtNow.ToString("yyyyMMdd") + dtNow.ToString("HHmmss");
                 //bmp.Save(dtstr + ".png", ImageFormat.Png);
 
-                if (IsHankaku(strNormal)) 
+                if (IsHankaku(strNormal))
                 {
+                    //(2,3)～(4,7)の範囲をスキャンする
                     scanWidth = 3;
                 }
                 else
                 {
+                    //(2,3)～(8,7)の範囲をスキャンする
                     scanWidth = 7;
                 }
 
-                //(5,5)～(10,9)の範囲をスキャンする
                 for (int x = 0; x < scanWidth; x++)
                 {
                     byte dot = 0;

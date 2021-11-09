@@ -122,7 +122,6 @@ namespace _5x7dotFontSender
                     if (this.SendStop) { break; }
                 }
 
-                //serial.Write("0000\r");
                 serial.Close();
                 serial.Dispose();
             }
@@ -145,14 +144,5 @@ namespace _5x7dotFontSender
         {
             this.SendStop = true;
         }
-
-        //private string GetTextLine(int linenum)
-        //{
-        //    string s = tbxMessage.Text;
-        //    int i = Convert.ToInt32(s);
-
-        //    string Line = tbxMessage.Lines[i - 1];
-        //    MessageBox.Show(Line);
-        //}
     }
 }

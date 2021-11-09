@@ -48,6 +48,7 @@ namespace _5x7dotFontSender
             this.tbxMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxMessage.Size = new System.Drawing.Size(707, 160);
             this.tbxMessage.TabIndex = 3;
+            this.tbxMessage.Text = "マイクロビットで文字を表示します。";
             // 
             // lblSendText
             // 
@@ -60,11 +61,11 @@ namespace _5x7dotFontSender
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(638, 209);
+            this.btnSend.Location = new System.Drawing.Point(605, 209);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 23);
+            this.btnSend.Size = new System.Drawing.Size(108, 23);
             this.btnSend.TabIndex = 6;
-            this.btnSend.Text = "送　信";
+            this.btnSend.Text = "一　行　送　信";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
@@ -86,7 +87,7 @@ namespace _5x7dotFontSender
             // btnStop
             // 
             this.btnStop.Enabled = false;
-            this.btnStop.Location = new System.Drawing.Point(557, 209);
+            this.btnStop.Location = new System.Drawing.Point(524, 209);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(75, 23);
             this.btnStop.TabIndex = 5;
