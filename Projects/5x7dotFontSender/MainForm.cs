@@ -18,6 +18,8 @@ namespace _5x7dotFontSender
         private string SerialPortName = "";
         private bool SendStop = false;
         private int SendLineNumber = 0;   //送信する行番号
+        private int[] Speeds = { 18, 15, 14, 13, 12, 11, 10, 8, 6, 4, 2 };
+        private int SpeedCnt = 7;
 
         public MainForm()
         {
@@ -28,7 +30,7 @@ namespace _5x7dotFontSender
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            tbrSpeed.Value = this.SpeedCnt;
         }
 
         private void btnSerialOpen_Click(object sender, EventArgs e)
@@ -113,7 +115,7 @@ namespace _5x7dotFontSender
                     led += convert.MicrobitLED[data[i]];
                     serial.Write(led + "\r");
 
-                    for (int j = 0; j < 8; j++)
+                    for (int j = 0; j < this.SpeedCnt; j++)
                     {
                         Thread.Sleep(1);
                         Application.DoEvents();
@@ -143,6 +145,12 @@ namespace _5x7dotFontSender
         private void btnStop_Click(object sender, EventArgs e)
         {
             this.SendStop = true;
+        }
+
+        private void tbrSpeed_Scroll(object sender, EventArgs e)
+        {
+            this.SpeedCnt = this.Speeds[tbrSpeed.Value];
+            Debug.WriteLine(this.SpeedCnt);
         }
     }
 }

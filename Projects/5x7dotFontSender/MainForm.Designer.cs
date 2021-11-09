@@ -37,7 +37,11 @@ namespace _5x7dotFontSender
             this.lblConnect = new System.Windows.Forms.Label();
             this.btnSerialOpen = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
+            this.tbrSpeed = new System.Windows.Forms.TrackBar();
+            this.lblSpeedSlow = new System.Windows.Forms.Label();
+            this.lblSpeedFast = new System.Windows.Forms.Label();
             this.gbxTextSend.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbrSpeed)).BeginInit();
             this.SuspendLayout();
             // 
             // tbxMessage
@@ -67,7 +71,7 @@ namespace _5x7dotFontSender
             this.btnSend.Location = new System.Drawing.Point(448, 209);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(108, 23);
-            this.btnSend.TabIndex = 6;
+            this.btnSend.TabIndex = 9;
             this.btnSend.Text = "一　行　送　信";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
@@ -76,6 +80,9 @@ namespace _5x7dotFontSender
             // 
             this.gbxTextSend.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbxTextSend.Controls.Add(this.lblSpeedFast);
+            this.gbxTextSend.Controls.Add(this.lblSpeedSlow);
+            this.gbxTextSend.Controls.Add(this.tbrSpeed);
             this.gbxTextSend.Controls.Add(this.btnStop);
             this.gbxTextSend.Controls.Add(this.lblConnect);
             this.gbxTextSend.Controls.Add(this.btnSerialOpen);
@@ -96,7 +103,7 @@ namespace _5x7dotFontSender
             this.btnStop.Location = new System.Drawing.Point(367, 209);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(75, 23);
-            this.btnStop.TabIndex = 5;
+            this.btnStop.TabIndex = 8;
             this.btnStop.Text = "送信停止";
             this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
@@ -131,6 +138,35 @@ namespace _5x7dotFontSender
             this.btnClean.UseVisualStyleBackColor = true;
             this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
+            // tbrSpeed
+            // 
+            this.tbrSpeed.AutoSize = false;
+            this.tbrSpeed.Location = new System.Drawing.Point(171, 208);
+            this.tbrSpeed.Name = "tbrSpeed";
+            this.tbrSpeed.Size = new System.Drawing.Size(144, 24);
+            this.tbrSpeed.TabIndex = 6;
+            this.tbrSpeed.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.tbrSpeed.Value = 8;
+            this.tbrSpeed.Scroll += new System.EventHandler(this.tbrSpeed_Scroll);
+            // 
+            // lblSpeedSlow
+            // 
+            this.lblSpeedSlow.AutoSize = true;
+            this.lblSpeedSlow.Location = new System.Drawing.Point(92, 220);
+            this.lblSpeedSlow.Name = "lblSpeedSlow";
+            this.lblSpeedSlow.Size = new System.Drawing.Size(79, 12);
+            this.lblSpeedSlow.TabIndex = 5;
+            this.lblSpeedSlow.Text = "表示速度 遅い";
+            // 
+            // lblSpeedFast
+            // 
+            this.lblSpeedFast.AutoSize = true;
+            this.lblSpeedFast.Location = new System.Drawing.Point(318, 220);
+            this.lblSpeedFast.Name = "lblSpeedFast";
+            this.lblSpeedFast.Size = new System.Drawing.Size(27, 12);
+            this.lblSpeedFast.TabIndex = 7;
+            this.lblSpeedFast.Text = "速い";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -143,6 +179,7 @@ namespace _5x7dotFontSender
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.gbxTextSend.ResumeLayout(false);
             this.gbxTextSend.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbrSpeed)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -157,6 +194,9 @@ namespace _5x7dotFontSender
         private System.Windows.Forms.Button btnSerialOpen;
         private System.Windows.Forms.Label lblConnect;
         private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.TrackBar tbrSpeed;
+        private System.Windows.Forms.Label lblSpeedFast;
+        private System.Windows.Forms.Label lblSpeedSlow;
     }
 }
 
