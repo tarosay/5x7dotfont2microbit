@@ -33,13 +33,13 @@ namespace _5x7dotFontSender
             this.lblSendText = new System.Windows.Forms.Label();
             this.btnSend = new System.Windows.Forms.Button();
             this.gbxTextSend = new System.Windows.Forms.GroupBox();
+            this.lblSpeedFast = new System.Windows.Forms.Label();
+            this.lblSpeedSlow = new System.Windows.Forms.Label();
+            this.tbrSpeed = new System.Windows.Forms.TrackBar();
             this.btnStop = new System.Windows.Forms.Button();
             this.lblConnect = new System.Windows.Forms.Label();
             this.btnSerialOpen = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
-            this.tbrSpeed = new System.Windows.Forms.TrackBar();
-            this.lblSpeedSlow = new System.Windows.Forms.Label();
-            this.lblSpeedFast = new System.Windows.Forms.Label();
             this.gbxTextSend.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbrSpeed)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +96,35 @@ namespace _5x7dotFontSender
             this.gbxTextSend.TabIndex = 0;
             this.gbxTextSend.TabStop = false;
             // 
+            // lblSpeedFast
+            // 
+            this.lblSpeedFast.AutoSize = true;
+            this.lblSpeedFast.Location = new System.Drawing.Point(318, 220);
+            this.lblSpeedFast.Name = "lblSpeedFast";
+            this.lblSpeedFast.Size = new System.Drawing.Size(27, 12);
+            this.lblSpeedFast.TabIndex = 7;
+            this.lblSpeedFast.Text = "速い";
+            // 
+            // lblSpeedSlow
+            // 
+            this.lblSpeedSlow.AutoSize = true;
+            this.lblSpeedSlow.Location = new System.Drawing.Point(92, 220);
+            this.lblSpeedSlow.Name = "lblSpeedSlow";
+            this.lblSpeedSlow.Size = new System.Drawing.Size(79, 12);
+            this.lblSpeedSlow.TabIndex = 5;
+            this.lblSpeedSlow.Text = "表示速度 遅い";
+            // 
+            // tbrSpeed
+            // 
+            this.tbrSpeed.AutoSize = false;
+            this.tbrSpeed.Location = new System.Drawing.Point(171, 208);
+            this.tbrSpeed.Name = "tbrSpeed";
+            this.tbrSpeed.Size = new System.Drawing.Size(144, 24);
+            this.tbrSpeed.TabIndex = 6;
+            this.tbrSpeed.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.tbrSpeed.Value = 8;
+            this.tbrSpeed.Scroll += new System.EventHandler(this.tbrSpeed_Scroll);
+            // 
             // btnStop
             // 
             this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -111,9 +140,10 @@ namespace _5x7dotFontSender
             // lblConnect
             // 
             this.lblConnect.AutoSize = true;
+            this.lblConnect.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblConnect.Location = new System.Drawing.Point(82, 26);
             this.lblConnect.Name = "lblConnect";
-            this.lblConnect.Size = new System.Drawing.Size(63, 12);
+            this.lblConnect.Size = new System.Drawing.Size(70, 12);
             this.lblConnect.TabIndex = 1;
             this.lblConnect.Text = "接続ポート: ";
             // 
@@ -137,35 +167,6 @@ namespace _5x7dotFontSender
             this.btnClean.Text = "文字消去";
             this.btnClean.UseVisualStyleBackColor = true;
             this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
-            // 
-            // tbrSpeed
-            // 
-            this.tbrSpeed.AutoSize = false;
-            this.tbrSpeed.Location = new System.Drawing.Point(171, 208);
-            this.tbrSpeed.Name = "tbrSpeed";
-            this.tbrSpeed.Size = new System.Drawing.Size(144, 24);
-            this.tbrSpeed.TabIndex = 6;
-            this.tbrSpeed.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.tbrSpeed.Value = 8;
-            this.tbrSpeed.Scroll += new System.EventHandler(this.tbrSpeed_Scroll);
-            // 
-            // lblSpeedSlow
-            // 
-            this.lblSpeedSlow.AutoSize = true;
-            this.lblSpeedSlow.Location = new System.Drawing.Point(92, 220);
-            this.lblSpeedSlow.Name = "lblSpeedSlow";
-            this.lblSpeedSlow.Size = new System.Drawing.Size(79, 12);
-            this.lblSpeedSlow.TabIndex = 5;
-            this.lblSpeedSlow.Text = "表示速度 遅い";
-            // 
-            // lblSpeedFast
-            // 
-            this.lblSpeedFast.AutoSize = true;
-            this.lblSpeedFast.Location = new System.Drawing.Point(318, 220);
-            this.lblSpeedFast.Name = "lblSpeedFast";
-            this.lblSpeedFast.Size = new System.Drawing.Size(27, 12);
-            this.lblSpeedFast.TabIndex = 7;
-            this.lblSpeedFast.Text = "速い";
             // 
             // MainForm
             // 

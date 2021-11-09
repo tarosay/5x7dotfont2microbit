@@ -11,6 +11,9 @@
 ## マイクロビットプログラムは、以下のリポジトリからインポートしてください。
 [https://github.com/tarosay/microbit-microbit-airsend](https://github.com/tarosay/microbit-microbit-airsend)
 
+## マイクロビット間の無線通信にも対応しています
+　複数のマイクロビットに同じプログラムを入れると、マイクロビット間でシンクロして文字が表示されます。
+
 ## PCからの送信データとマイクロビットLEDの5x5点灯の説明
 マイクロビットの5x5LEDの点灯パラメータとして、1列ごとに1文字の英数文字を割り付けています。
 
